@@ -163,7 +163,7 @@ export default {
     this.resize();
     this.updatePoint();
     this.beforeUnloadListener = (event) => {
-      if (this.$refs.state.contribute) {
+      if (this.$refs.state && this.$refs.state.contribute) {
         event.preventDefault();
         event.returnValue = '';
       }
